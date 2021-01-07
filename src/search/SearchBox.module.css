@@ -1,0 +1,54 @@
+.main {
+    margin-top: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.list{
+    list-style: none;
+    width: 80%;
+    align-items: center;
+}
+
+.listItem {
+    height: 72px;
+    margin: 4px;
+    min-width: 600px; 
+}
+
+.listItem img {
+    max-height: 64px;
+    align-items: center;
+  }
+
+.listItem.addMovie{
+    align-items: center;
+}
+
+.listItem:hover .addMovie {
+    display: inline-flex;
+}
+
+.listItem.addActor{
+    display: none;
+    overflow: auto;
+}
+
+.listItem:hover .addActor {
+    display: inline-flex;
+}
+
+li{
+    overflow: auto;
+}
+
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+

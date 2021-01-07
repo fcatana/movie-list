@@ -1,0 +1,14 @@
+.star {
+  color: grey;
+}
+
+.active,
+.star:hover {
+  color: orange;
+}
+
+
+.movie_title {
+  text-align:start;
+  color:maroon;
+}
