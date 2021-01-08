@@ -3,7 +3,6 @@ import './App.css';
 import Header from './shared/Header';
 import SavedMovies from './savedmovies/SavedMovies'
 import SearchBox from './search/SearchBox'
-import SavedActors from './savedactors/SavedActors'
 
 
 
@@ -11,7 +10,6 @@ class App extends React.Component {
 constructor (props){
   super(props)
   
-  this.handleAddActor = this.handleAddActor.bind(this);
   const movies= JSON.parse(window.localStorage.getItem('saved-movies'))
   if (movies && Array.isArray(movies)) {
     this.state = {
@@ -39,7 +37,7 @@ handleAddMovie = (movie) => {
   )
 }
 
-handleAddActor = (actor) => {
+/*handleAddActor = (actor) => {
   const actors_movies = this.state.actors
   this.setState(
     {
@@ -54,7 +52,7 @@ handleAddActor = (actor) => {
       {actor.known_for.map(actor_movie => <div>{actor_movie.original_title}</div>)}
     },
   )
-}
+}*/
 
 handleDeleteMovie = (movieId) => {
   console.log ('deleting' , movieId)
@@ -86,11 +84,11 @@ render () {
   else{
   
     search_m =  <SearchBox onActorAdd= {this.handleAddActor} />
-    saved_list = <SavedActors
-    savedActors={this.state.actors}
-    />
+    //saved_list = <SavedActors
+    //savedActors={this.state.actors}
+    ///>
   }
-  console.log("search mode moviie", this.props.movie);
+  console.log("search mode movie", this.props.movie);
   return (
     <div className="App">
       <Header />
